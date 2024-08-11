@@ -4,8 +4,6 @@ layout: archive
 
 {{ content }}
 
-<h3 class="archive__subtitle">{{ page.excerpt }}</h3>
-
 {% if paginator %}
   {% assign posts = paginator.posts %}
 {% else %}
@@ -14,6 +12,7 @@ layout: archive
 
 {% assign entries_layout = page.entries_layout | default: 'list' %}
 <div class="entries-{{ entries_layout }}">
+  <h2 class="archive__subtitle">{{ page.excerpt }}</h2>
   {% for post in posts %}
     {% include archive-single.html type=entries_layout %}
   {% endfor %}
