@@ -4,6 +4,8 @@ layout: archive
 
 {{ content }}
 
+<h3 class="archive__subtitle">{{ page.excerpt }}</h3>
+
 {% if paginator %}
   {% assign posts = paginator.posts %}
 {% else %}
